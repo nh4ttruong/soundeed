@@ -1,5 +1,4 @@
 # SOUNDeeD Project
-![Graph Function](graph-function.jpg)
 
 ## About SOUNDeeD
 **SOUNDeeD** is a website which is designed to help you relax, focus with your work, study,....
@@ -11,6 +10,8 @@ If you need a watch to determine how long you need to focus, then the Podoromo i
 If you are tired of looking at the background of the website, you can choose from different backgrounds from the website, including dynamic or static wallpapers. Don't worry about it, our web-integrated backgrounds have been carefully selected for your comfort.
 
 I hope **SOUNDeeD** is enjoyable and useful for you and we you have a relaxing day! From **nh4ttruong** and **dr00py** with :heart: !
+
+![Graph Function](graph-function.jpg)
 
 ## Functions
 SOUNDeeD can do:
