@@ -1,0 +1,22 @@
+<div id="background" class="element-sound d-none text-center">
+    <div class="container" id="bg-container">
+        <div class="row">
+            {% for i in background %}
+
+            <div class="col-6 col-md-3 my-4 element">
+                <input type="radio" name="background" id="bg{{i.id}}" class="input-hidden"/>
+                <label for="bg{{i.id}}">
+                    <img id="img{{i.id}}" src="media/{{i.thumbnail}}" alt="{{i.background}}" class="thumbnail">
+                </label>
+                <h4>{{ i.title }}</h4>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+    
+    <button type="button" onclick="changeBackground()" class="btn-custom mx-auto border-none shadow-none justify-content-center">
+        <i class="fas fa-check fa-2x text-black-50"></i>
+    </button>
+    
+</div>

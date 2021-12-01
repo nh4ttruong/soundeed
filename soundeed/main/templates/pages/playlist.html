@@ -1,0 +1,46 @@
+<div id="playlist" class="element-sound d-none text-center overflow-auto position-relative">
+    <div class="container" id="playlist-container">
+        <div class="row">
+            
+            {% for pl in user.playlist_set.all %}
+
+            <div class="col-6 col-md-4 my-4 element">
+                <div class="nameList" style="font-size: 20px;">{{pl}}</div>
+                <div class="config d-inline-flex justify-content-center">
+                    <div class="edit pt-4 pb-3">
+                        <a class="btn-playlist" id="play{{pl.id}}" onclick="handlePl('{{pl.playlist}}', '{{pl.id}}', '{{pl.title}}')">
+                            <i id="control{{pl.id}}" class="fas fa-play fa-2x controlSound"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+                
+        </div>
+    </div>
+    <div id="setPlaylist" class="container d-none">
+        <form method="post" action="#elements">
+            {% csrf_token %}
+             <div class="mt-5">
+                <h4>Playlist Name</h4>
+                <input id="playlistName" name="new" type="text" class="w-50 my-5"
+                    style="background-color:rgba(255, 255, 255, 0.795); line-height: 35px;">
+                <input class="d-none" name="addPlayList" id="playlist_here" type="text">
+            </div>       
+    
+            <div class="row d-inline-flex mb-4">
+                <div class="col-6">
+                    <button type="submit" onclick="retPlayList()" class="playlist-btn fas fa-plus fa-2x text-black-50">
+                        <a href=""></a> 
+                    </button>
+                </div>
+                <div class="col-6">
+                    <button type="button" name="dis" id="cancelBtn" class="playlist-btn fas fa-times fa-2x text-black-50"
+                        onclick="cancel()">
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

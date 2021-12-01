@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="shortcut icon" type="iamge" href="{% static 'icon2.svg' %}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/sound.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/player.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/podomoro.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/background.css' %}" type="text/css">
+
+    {% block styles %}
+
+    {% endblock %}
+
+    <title>SOUNDeeD · Sound & Chill</title>
+</head>
+
+<body>
+    <div class="bg">
+        <img id="static" src="/static/img/default.png" alt="" class="img-bg">
+        <video autoplay muted loop id="dynamic" class="vid-bg d-none">
+            <source src="" type="video/mp4">
+    </div>
+
+    </video>
+    {% include "pages/head.html" %}
+
+    <div id="home" class="homepage">
+        <div class="container parallax-content">
+            {% include "pages/sound.html" %}
+
+            {% include "pages/background.html" %}
+
+            {% if user.is_authenticated %}
+
+            {% include "pages/playlist.html" %}
+
+            {% endif %}
+
+            {% include "pages/podomoro.html" %}
+
+            {% include "pages/about.html" %}
+
+            <div class="col-12 col-md-12 col-lg-8 d-flex justify-content-center flex-column" id="welcome-text">
+                <h1>Welcome to SOUNDeeD</h1>
+            </div>
+        </div>
+    </div>
+    <div id="player" class="player">
+        {% include "pages/player.html" %}
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/handle.js' %}"></script>
+<script src="{% static 'js/player.js' %}"></script>
+<script src="{% static 'js/podomoro.js' %}"></script>
+
+</html>

@@ -1,0 +1,27 @@
+{% extends "user/base.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %} 
+
+{% load crispy_forms_tags %}         
+
+<!--Register--> 
+	<div style="margin: 0 auto 0 auto; padding: 3px 0px">
+		<h2>REGISTER</h2>
+	</div>
+	<form class="form-model" method="POST">
+		{% csrf_token %}
+		{{ register_form.username }}
+		{{ register_form.email }}   
+		{{ register_form.password1 }}
+		{{ register_form.password2 }}
+		<div style="margin: 20px auto 0 auto;">
+			<button class="btn btn-form" type="submit">Register</button>
+		</div>
+		<div style="margin: 0 auto 0 auto; padding: 10px 0px">
+			<p>If you already have an account, <a href="/login" style="color:#222">login</a> instead.</p>
+		</div>	      
+	</form>
+
+{% endblock %}

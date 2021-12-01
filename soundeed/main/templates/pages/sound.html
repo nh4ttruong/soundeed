@@ -1,0 +1,52 @@
+{% load static %}
+<div id="elements" class="element-sound d-none text-center overflow-auto position-relative">
+    <div class="container px-0" id="sound-container">
+        <div class="row" id="con-row">
+
+            {% for i in sound %}
+
+            <div class="col-6 col-md-3 my-4 element">
+                <div class="icon" style="font-size: 5rem;">
+                    <button onclick="playStop({{i.title}}Sound)" type="button" class="icon-button">
+
+                        {% if i.icon|length == 0 %}
+                        <img class="avatar" src="/media/{{i.avatar}}" alt="{{i.title}} icon"/>
+                        {% else %}
+                        <i class="avatar {{i.icon}}" id="{{i.title}}SoundIcon"></i>
+                        {% endif %}
+                    </button>
+
+                    <audio id="{{i.title}}Sound" class="sounds" loop>
+                        <source src="media/{{i.audio}}" type="audio/mp3">
+                    </audio>
+                </div>
+
+                <div class="icon-body">
+                    <h3>{{ i.title }}</h3>
+                    <div class="slidercontainer">
+                        <input type="range" min="1" max="100" value="40" oninput="setVolume({{i.title}}Sound, this.value)" class="slider"
+                            id="{{i.title}}SoundSlider">
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+    <div class="row-cols-2">
+        {% if user.is_authenticated %}
+        <button id="btnSetPlaylist" type="submit" onclick="setPlaylist()" class="btn-custom mx-auto px-2 border-none shadow-none justify-content-center">
+            <i class="fas fa-plus fa-2x text-black-50"></i>
+        </button>
+        {% else %}
+        <button id="btnSetPlaylist" type="button" class="btn-custom mx-auto px-2 border-none shadow-none justify-content-center">
+            <a href="/login"><i class="fas fa-plus fa-2x text-black-50"></i></a>
+        </button>
+        {% endif %}
+        <button id="btnRandom" type="button" onclick="randomMix()" class="btn-custom mx-auto px-2 border-none shadow-none justify-content-center">
+            <i class="fas fa-random fa-2x text-black-50"></i>
+        </button>
+    </div>
+
+</div>

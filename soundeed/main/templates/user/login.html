@@ -1,0 +1,34 @@
+{% extends "user/base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}      
+
+{% load crispy_forms_tags %}
+
+  <div id="login" style="margin: 0 auto 0 auto; padding: 1px 0px">
+    <h2>LOGIN</h2>
+  </div>
+  <form method="POST">
+    {% csrf_token %}
+    {{ login_form.username }}
+    {{ login_form.password }}
+
+    <div id="extend-container">
+      <span class="help-info" id="register"><a href="/register" style="background-color: transparent; color: #ddd;">Register</a></span>
+      <span class="help-info" id="forgotten"><a href="/password_reset" style="background-color: transparent; color: #ddd;">Forgotten password</a></span>
+    </div>
+    <div style="margin: 60px auto 0px auto; position: relative;">
+      <button class="btn btn-form" type="submit">Log In</button>
+    </div>
+    <div style="padding: 15px;">
+      {% for message in messages %}
+
+      <div class="alert alert-danger" id="alert{{forloop.counter}}">
+          <a class="close" href="#" data-dismiss ="alert" onclick="$('#alert{{forloop.counter}}').hide()">×</a>
+          {{ message }}
+      </div>
+      {% endfor %}
+    </div>
+  </form>
+{% endblock %}
