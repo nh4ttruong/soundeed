@@ -10,7 +10,7 @@ If you are tired of looking at the background of the website, you can choose fro
 
 I hope **SOUNDeeD** is enjoyable and useful for you and we you have a relaxing day! From **nh4ttruong** and **dr00py** with :heart: !
 
-![Graph Function](graph-function.jpg)
+![Graph Function](images/graph-function.jpg)
 
 ## Functions
 SOUNDeeD can do:
