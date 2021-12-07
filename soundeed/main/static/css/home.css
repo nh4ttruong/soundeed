@@ -52,7 +52,7 @@
     transform: translateY(-9%);
   }
   .parallax-content h1 {
-    padding: 180px 0px!important;
+    padding: 40vh 0px!important;
   }
 
   .btn-custom {
@@ -71,8 +71,7 @@
   font-family: arial black;
   font-size: 40px;
   color: white;
-  padding: 130px 0px;
-  margin-top: 125px;
+  padding: 30vh 0px;
   text-align: center;
   display: table-cell;
   vertical-align: middle;
@@ -136,4 +135,31 @@ a:hover {
   text-align: center;
   padding: 20px;
   margin-top: 15vh;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .parallax-content h1 {
+    font-family: arial black;
+    font-size: 35px;
+    color: white;
+    padding: 40vh 0px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+  .btn-custom {
+    width: 50px;
+    height: 50px;
+    z-index: 99999;
+    border-radius: 50%;
+    background-color:  rgba(255, 255, 255, 0.801);
+    margin-top: 10px;
+    overflow: overlay;
+    outline: none;
+  }
 }

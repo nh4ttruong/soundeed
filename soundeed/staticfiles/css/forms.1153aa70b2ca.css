@@ -1,0 +1,302 @@
+html {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+  color: #fff;
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+}
+
+.btn-form {
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 12px;
+  margin: 0 auto 0 auto;
+  width: 80%;
+  height: 50px;
+  display: block;
+  border-radius: 6px;
+  opacity: 0.8;
+  box-shadow: 10px 10px 30px #000;
+  transition: all 0.2s ease-in-out;
+  color: #222;
+  font-size: 21px;
+  background: #fff;
+}
+
+form {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto 0 auto;
+  padding-top: 10px;
+  color: #fff;
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+}
+
+/* Login container */
+#container {
+  position: relative;
+  top: 177px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto 0 auto;
+  width: 60vh;
+  font-size: 12px;
+  height: auto;
+  border-radius: 8px;
+  background: rgba(3, 3, 3, 0.25);
+  box-shadow: 1px 1px 50px #000;
+}
+
+#container #forgotten-container {
+  margin: 0px 10px;
+  padding: 0px 8px;
+  font-size: 15px;
+  max-height: 500px;
+  overflow: auto;
+}
+
+#homepage {
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  background-color: transparent!important;
+  margin: 20px auto 0 auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+  animation: flicker 1.5s infinite alternate;
+  color: #eee;
+}
+
+/* Flickering animation */
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 4px #eee,
+      0 0 11px #eee,
+      0 0 19px #eee,
+      0 0 40px #f09,
+      0 0 80px #f09,
+      0 0 90px #f09,
+      0 0 100px #f09,
+      0 0 150px #f09;
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
+
+@media(max-width: 768px) {
+  #homepage {
+    width: 100%!important;
+    padding: 0px!important;
+    top: 45px;
+  }
+  #container {
+    height: auto;
+    width: 85%;
+    top: 200px;
+    padding: 0px 10px;
+  }
+
+}
+
+#homepage:hover {
+  transition: all 0.5s ease-out;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+h2 {
+  font-family: "Open Sans Condensed", sans-serif;
+  position: relative;
+  text-align: center;
+  margin: 25px 0px;
+  padding-top: 10px;
+  font-size: 30px;
+  color: #ddd;
+  text-shadow: 3px 3px 10px #000;
+  display: block;
+  left: 0;
+}
+
+p {
+  font-family: "Open Sans Condensed", sans-serif;
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 13px;
+}
+
+ul {
+  padding: 2px 50px 0px 50px;
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.842);
+}
+
+
+
+input {
+  font-family: "Open Sans Condensed", sans-serif;
+  text-decoration: none;
+  position: relative;
+  width: 80%;
+  display: block;
+  margin: 9px auto;
+  font-size: 15px;
+  color: #333;
+  padding: 10px 15px 10px 15px;
+  border-radius: 6px;
+  border: none;
+  background: rgba(3, 3, 3, 0.1);
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #fff;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 3px 3px 10px #333;
+  background: rgba(3, 3, 3, 0.18);
+}
+
+::-webkit-input-placeholder {
+  color: #ddd;
+}
+
+/* Link */
+a {
+  font-family: "Open Sans Condensed", sans-serif;
+  text-align: center;
+  padding: 2px 6px;
+  background: #ddd;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  text-shadow:
+    0 0 4px #fff,
+    0 0 11px #eee,
+    0 0 19px #eee,
+    0 0 40px #111,
+    0 0 80px #222,
+    0 0 90px #333,
+    0 0 100px #333,
+    0 0 150px #333;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+#forgotten-container #close-btn {
+  cursor: pointer;
+  line-height: 2px;
+  top: 10px;
+  right: 10px;
+  width: 10px;
+  height: 18px;
+  position: fixed;
+  opacity: 0.5;
+  border-radius: 50%;
+  background-image: url("https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#alert {
+  font-family: "Open Sans Condensed", sans-serif;
+  left: 0;
+  right: 0;
+  opacity: 0.8;
+  padding: 10px 12px 10px 10px;
+  display: inline-block;
+}
+
+#alert a {
+  background-color: #222;
+  opacity: 0.8;
+}
+
+#alert a:hover {
+  opacity: 0.4  ;
+}
+
+#forgotten-container #close-btn:hover {
+  opacity: 0.2;
+}
+
+#close-btn img {
+  width: 20px;
+  padding: 10px 10px 0px 10px;
+  position: fixed;
+  right: 0;
+}
+
+button:hover {
+  background-color: #111;
+  color: #fff;
+  border: #fff;
+  box-shadow: #ddd;
+}
+
+#extend-container {
+  position: relative;
+  margin: 5px 25px;
+}
+
+.help-info {
+  position: relative;
+  font-size: 16px;
+  font-family: "Hind", sans-serif;
+  color: #ddd!important;
+  margin: 0 auto 0 auto;
+  top: 8px;
+  cursor: pointer;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.help-info:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#forgotten {
+  position: absolute;
+  right: 0;
+}
+
+#register {
+  position: absolute;
+  left: 0;
+}
+
+.close-btn:hover{
+  opacity: .8;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0px 27px;
+}

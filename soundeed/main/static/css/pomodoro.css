@@ -1,0 +1,164 @@
+a {
+  color: #eee;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+  color: #eee;
+  text-decoration: none;
+}
+
+.lv1 {
+  display: inline-block;
+  width: 135px;
+  max-width: 75%;
+  margin: 0 auto;
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+.updown {
+  padding: 8px 4px;
+}
+
+.minutes .larger {
+  font-size: 2em;
+}
+
+.controls .btn {
+  width: 100px;
+  border-radius: 30px;
+  border: none;
+  text-shadow: none;
+}
+
+.btn-noselect {
+  background-color: rgba(255, 255, 255, 0.795);
+}
+
+.btn-pause {
+  background-color: rgba(255, 255, 0, 0.705);
+  transition: background-color 0.4s ease-in;
+  color: #eee;
+}
+
+#toggle:hover,
+.btn-run {
+  background-color: rgba(72, 224, 117, 0.801);
+  transition: background-color 0.4s ease-in;
+  color: #eee;
+}
+
+#reset:hover {
+  background-color: rgba(228, 64, 64, 0.788);
+  transition: background-color 0.4s ease-in;
+  color: #eee;
+}
+
+.timer {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  color: #0f0f0a;
+}
+.timer .timer-backboard {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.timer .timer-backboard i {
+  font-size: 12em;
+  color: #eeeeeec9;
+}
+.timer .timer-visible {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  height: 0px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.timer .timer-visible i {
+  font-size: 12em;
+  color: #eeeeeec9;
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.no-select h2 {
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+  font-weight: bolder;
+  font-size: 40px;
+  color: #fff;
+  background-color: transparent !important;
+  animation: flicker 1.5s infinite alternate;
+  border-radius: 6px;
+  text-decoration: none !important;
+  color: #fff;
+  text-shadow: 0 0 4px #fff, 0 0 11px #eee, 0 0 19px #eee, 0 0 40px #111,
+    0 0 80px #222, 0 0 90px #333, 0 0 100px #333, 0 0 150px #333;
+}
+
+.no-select h2:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #eee, 0 0 11px #eee, 0 0 19px #eee, 0 0 40px #f09,
+      0 0 80px #f09, 0 0 90px #f09, 0 0 100px #f09, 0 0 150px #f09;
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+.time-left {
+  max-width: 300px;
+  margin: 2em auto 2px auto;
+  border-radius: 25px;
+  color: #eee;
+}
+
+.pomodoro-con .container {
+  max-height: 65vh;
+  overflow: auto;
+  background-color: rgba(34, 34, 34, 0.333);
+  border-radius: 30px;
+  text-align: center;
+  margin-top: 15vh;
+}
+
+
+#pomodoro {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {   
+  #pomodoro {
+    width: 60%;
+  }
+}

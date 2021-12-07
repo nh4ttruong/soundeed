@@ -1,7 +1,7 @@
 <div id="playlist" class="element-sound d-none text-center overflow-auto position-relative">
     <div class="container" id="playlist-container">
         <div class="row">
-            
+
             {% for pl in user.playlist_set.all %}
 
             <div class="col-6 col-md-4 my-4 element">
@@ -14,9 +14,7 @@
                     </div>
                 </div>
             </div>
-
             {% endfor %}
-                
         </div>
     </div>
     <div id="setPlaylist" class="container d-none">
@@ -32,7 +30,6 @@
             <div class="row d-inline-flex mb-4">
                 <div class="col-6">
                     <button type="submit" onclick="retPlayList()" class="playlist-btn fas fa-plus fa-2x text-black-50">
-                        <a href=""></a> 
                     </button>
                 </div>
                 <div class="col-6">

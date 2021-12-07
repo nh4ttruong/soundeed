@@ -1,0 +1,43 @@
+.thumbnail {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  margin: 15px 0px;
+  border-radius: 20px;
+}
+
+.container h4 {
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+img:hover {
+  box-shadow: 0 0 5px 5px #ececec;
+}
+
+#sound-container {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#bg-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.input-hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+input[type="radio"]:checked + label > img {
+  box-shadow: 0 0 5px 5px #ffd73d;
+}
+
+input[type="radio"]:checked + label > img {
+  transform: rotateZ(-10deg) rotateX(10deg);
+}

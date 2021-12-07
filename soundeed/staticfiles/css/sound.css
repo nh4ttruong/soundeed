@@ -1,0 +1,138 @@
+.element-sound {
+  float: left;
+  left: 0px;
+  right:0px;
+  width: 95%;
+  margin-top: 15vh;
+}
+
+.element-sound .container {
+  max-height: 57vh;
+  overflow: auto;
+  background-color: rgba(34, 34, 34, 0.333);
+  border-radius: 30px;
+  text-align: center;
+}
+
+#playlistName {
+  width: 90%!important;
+}
+
+.playlist-btn {
+  height: 50px;
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0.795);
+  border-radius: 30px;
+  margin: 20px 10px;
+}
+
+#addPlaylist:hover {
+  background-color: rgba(72, 224, 117, 0.692);
+  transition: background-color 0.4s ease-in;
+}
+
+.btn-playlist {
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  text-align: center;
+  color: white;
+}
+
+#cancelBtn:hover {
+  background-color: rgba(228, 64, 64, 0.705);
+  transition: background-color 0.4s ease-in;
+}
+
+#sound-container {
+  text-align: -webkit-center!important;
+  font-weight: lighter;
+}
+
+/* Round volume slider */
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;  
+  background: #fff;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .8s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #ffd73d;
+
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #ffd73d;
+  cursor: pointer;
+}
+
+.slidercontainer {
+  width: 50%;
+}
+
+.icon-body h3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.icon-button {
+  background: transparent;
+  border: none;
+}
+
+.avatar {
+  width: 80%;
+  height: auto;
+  color: white;
+}
+
+.avatar:hover {
+  color: rgb(255, 255, 123);
+  transition: color 0.4s ease-in
+}
+
+
+@media only screen and (min-width: 768px) {
+  #setPlaylist {
+    width: 50%;
+  }
+
+  #playlistName {
+    width: 70%!important;
+  }
+
+  #playlistMode {
+    width: 80%!important;
+  }
+
+  .element-sound .container {
+    max-height: 65vh;
+    overflow: auto;
+    background-color: rgba(34, 34, 34, 0.333);
+    border-radius: 30px;
+    text-align: center;
+  }
+
+  .slidercontainer {
+    width: 40%;
+  }
+}
+
+.con-row {
+  width: 96%;
+}

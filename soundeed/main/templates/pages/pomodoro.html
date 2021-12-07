@@ -1,0 +1,50 @@
+<div id="pomodoro" class="pomodoro-con d-none">
+  <div class="container no-select">
+    <a href="#pomodoro" class="text-decoration-none">
+      <h2 class="text-center mx-auto py-4">POMODORO</h2>
+    </a>
+    <div class="minutes text-center">
+      <div class="row-cols-3 d-flex py-3">
+        <div id="periodSS" class="row-cols-2 my-auto">
+          <span class="lv1">PERIOD</span>
+          <div class="lv1">
+            <div class="row-cols-3 d-flex">
+              <a id="s-down" class="updown"><i class="fas fa-minus"></i></a>
+              <span id="period" style="font-size: 30px;">1</span>
+              <a id="s-up" class="updown"><i class="fas fa-plus"></i></a>
+            </div>
+          </div>
+        </div>
+        <!--Timer icon-->
+        <div class='timer my-auto py-3'>
+          <div class="timer-backboard">
+            <i class="fa fa-hourglass" aria-hidden="true"></i>
+          </div>
+          <div class="timer-visible">
+            <i class="fa fa-hourglass" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div id="breakSS" class="row-cols-2 my-auto">
+          <span class="lv1">BREAK</span>
+          <div class="lv1">
+            <div class="row-cols-3 d-flex">
+              <a id="b-down" class="updown"><i class="fas fa-minus"></i></a>
+              <span id="break" style="font-size: 30px;">1</span>
+              <a id="b-up" class="updown"><i class="fas fa-plus"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="time-left text-center mx-auto my-auto pt-1 pb-2" style="font-weight: bolder; font-size: 3rem;"><span
+        id="mins">1</span>m <span id="secs">0</span>s</div>
+
+    <div class="controls text-center pt-3 pb-4">
+      <a id="toggle" class="btn btn-noselect">Start</a>
+      <!-- do warning pause-->
+      <a id="reset" class="btn btn-noselect">Reset</a>
+    </div>
+  </div>
+</div>

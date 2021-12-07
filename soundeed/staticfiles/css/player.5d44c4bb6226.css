@@ -1,0 +1,232 @@
+.player {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #222222;
+}
+
+.player .info {
+  position: absolute;
+  height: 60px;
+  left: 0;
+  opacity: 0;
+  background-color: rgba(238, 238, 238, 0.701);
+  padding: 5px 15px 5px 20px;
+  border-end-end-radius: 15px;
+  border-start-end-radius: 15px;
+  transition: all 0.5s ease;
+}
+
+.player .info .sound-name, .player .info .mode {
+  display: block;
+}
+
+.player .info .sound-name {
+  color: #222;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.player .info .mode {
+  color: #999;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.player .info .progress-bar {
+  background-color: #ddd;
+  height: 2px;
+  width: 100%;
+  position: relative;
+}
+
+.player .info .progress-bar .bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: red;
+  width: 10%;
+  transition: all 0.2s ease;
+}
+
+.player .info.active {
+  top: -60px;
+  width: 80%;
+  opacity: 10;
+  transition: all 0.5s ease;
+}
+
+@media only screen and (min-width: 768px) {
+  .player .info.active {
+    top: -60px;
+    width: 25%;
+    opacity: 10;
+    transition: all 0.5s ease;
+  }
+}
+
+.player .control-panel {
+  position: relative;
+  background-color: #222;
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+  z-index: 5;
+}
+
+.player .control-panel .disc {
+  position: absolute;
+  left: 20px;
+  top: 12px;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0);
+  transform: scale(1);
+  transition: all 0.5s ease;
+}
+
+.player .control-panel .disc::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 5;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.player .control-panel .disc::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80px;
+  background-image: url("../img/meow.ca7fb57d511e.jpg");
+}
+
+.player .control-panel.active .disc {
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
+  transform: scale(1.2);
+  transition: all 0.5s ease;
+}
+
+.player .control-panel.active .disc::before {
+  animation: rotation 3s infinite linear;
+  -webkit-animation: rotation 3s infinite linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.player .control-panel .controls {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  padding-top: 10px;
+}
+
+.player .control-panel .controls .play {
+  width: 85px;
+  height: 85px;
+  border-radius: 10px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 80px;
+  background-color: #222222;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
+  background-image: url("../img/play.2a719454c578.png");
+  margin: 0px 45px -4px 45px;
+}
+
+
+.player .control-panel .controls .list {
+  width: 85px;
+  height: 85px;
+  border-radius: 10px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 65%;
+  background-color: #222222;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
+  background-image: url("../img/wave.2a3ffefdebe1.png");
+  margin-bottom: 3px;
+}
+
+.player .control-panel .controls .pomodoro {
+  width: 85px;
+  height: 85px;
+  border-radius: 10px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 55px;
+  background-color: #222222;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
+  background-image: url("../img/clock.be74944516ad.png");
+  margin-bottom: -4px;
+}
+
+@media(max-width: 786px) {
+  .player .control-panel .controls {
+    margin-left: 0!important;
+  }
+
+  .player .control-panel .controls .list {
+    background-size: 45px!important;
+  }
+
+  .player .control-panel .controls .play {
+    background-size: 65px!important;
+  }
+
+  .player .control-panel .controls .pomodoro {
+    background-size: 45px!important;
+  }
+}
+
+.player .control-panel .controls .play:hover {
+  background-color: rgb(43, 36, 36);
+  transition: background-color 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
+}
+
+.player .control-panel .controls .list:hover {
+  background-color: #333;
+  transition: background-color 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
+}
+
+.player .control-panel .controls .pomodoro:hover {
+  background-color: #333;
+  transition: background-color 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
+}
+
+.player .control-panel.active .controls .play {
+  background-image: url("../img/pause.5f5a35065c10.png");
+  background-size: 56px;
+}
