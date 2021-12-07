@@ -13,7 +13,8 @@ I hope **SOUNDeeD** is enjoyable and useful for you and we you have a relaxing d
 ![Graph Function](images/graph-function.jpg)
 
 ## Functions
-SOUNDeeD can do:
+SOUNDeeD can:
+- Responsive mobile friendly
 - Countdown clock for Podomoro method
 - Play chill sounds
 - Random mix sound
